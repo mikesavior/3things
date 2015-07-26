@@ -26,7 +26,7 @@
 <body>
 <script src="jquery.jeditable.js"</script>
 <script src="https://code.jquery.com/jquery-2.1.4.js"</script>
-
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
 
 <div id="mondo">
 <h1 id="mondo">Three Things.</h1>
@@ -37,15 +37,22 @@
 //		$
 //	};
 </script>
+<div ng-controller="goals">
 <fieldset id="crux">
         <form id="list">
 	<label for="un">un.<br>
-	<input type="text", name="un", id="alp"><br><br>
+	<input type="text", name="goal.un", ng-model="alp"><br><br>
 	<label for="bet">deux.<br>
-	<input type="text", name="deux", id="bet"><br><br>
+	<input type="text", name="goal.deux", ng-model="bet"><br><br>
 	<label for="thr">troix.<br>
-	<input type="text", name="troix", id="thr"><br><br>
+	<input type="text", name="goal.troix", ng-model="thr"><br><br>
 </fieldset>
 </form>
+</div>
 </body>
+<script>
+        function goals($scope){
+        $scope.update = angular.copy.goal;
+        }
+</script>
 </html>
