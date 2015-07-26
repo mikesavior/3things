@@ -1,0 +1,13 @@
+	
+	body	{background-color:#952748; font-family:roboto; text-align:center;}
+	h1 		{color:#16a6c7;}
+	p		{color:#16a6c7;}
+	label 	{color:#16a6c7;}
+	
+#crux 	{
+		border-color:#b2a622;
+		border-style:solid; 
+		border-radius:5px;
+		box-sizing: border-box;
+		display:inline;
+}
