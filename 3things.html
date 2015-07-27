@@ -1,5 +1,5 @@
 <!doctype=html>
-<html>
+<html ng-app>
 
 <head>
 <link rel="stylesheet" href="3things.css"></link>
@@ -32,27 +32,28 @@
 <h1 id="mondo">Three Things.</h1>
 <p id="centertits">get three things done.</p>
 </div>
-<script>
-//	function grobar(){
-//		$
-//	};
-</script>
-<div ng-controller="goals">
+<div ng-controller="goals">  
 <fieldset id="crux">
-        <form id="list">
+  <form id="list" ng-submit="submit()">
 	<label for="un">un.<br>
-	<input type="text", name="goal.un", ng-model="alp"><br><br>
+	<input type="text", name="un", ng-model="goals.alp"><br><br>
 	<label for="bet">deux.<br>
-	<input type="text", name="goal.deux", ng-model="bet"><br><br>
+	<input type="text", name="deux", ng-model="goals.bet"><br><br>
 	<label for="thr">troix.<br>
-	<input type="text", name="goal.troix", ng-model="thr"><br><br>
-</fieldset>
+	<input type="text", name="troix", ng-model="goals.thr"><br><br>
+  <input type="submit" id="submit" value="Make the list." />
+  <pre>{{goals.alp}}</pre>
+  <pre>{{goals.bet}}</pre>
+  <pre>{{goals.thr}}</pre>
+
 </form>
+
+</fieldset>
 </div>
-</body>
 <script>
-        function goals($scope){
-        $scope.update = angular.copy.goal;
+    function goals($scope) {
+        $scope.update = angular.copy.goals;
         }
 </script>
+   </body>
 </html>
