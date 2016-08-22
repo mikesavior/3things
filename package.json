@@ -1,0 +1,38 @@
+{
+    "name": "threethings",
+    "version": "0.0.1",
+    "description": "a list maker for killing three tasks.",
+    "author": "Mike K.",
+    "private": true,
+    "license": "WTFPL: Do Whatever TF you want, but I'm not responsible.",
+    "homepage": "www.mokentrol.com",
+    "repository:": {
+        "type": "git",
+        "url": "https://github.com/mikesavior/3things/3things.git"
+    },
+    "scripts": {
+        "postinstall": "./node_modules/.bin/bower install",
+        "clean": "./node_modules./bin/rimraf dist",
+        "build": "npm run clean && npm run buid:webpack"
+    },
+    "devDependencies": {
+        "bower": "^1.7.9",
+        "css-loader": "^0.23.1",
+        "exports-loader": "^0.6.3",
+        "extract-text-webpack-plugin": "^1.0.1",
+        "file-loader": "^0.9.0",
+        "html-loader": "^0.4.3",
+        "html-webpack-plugin": "^2.17.0",
+        "imports-loader": "^0.6.5",
+        "node-sass": "^3.7.0",
+        "rimraf": "^2.5.2",
+        "sass-loader": "^4.0.0",
+        "style-loader": "^0.13.1",
+        "url-loader": "^0.5.7",
+        "webpack": "^1.13.1",
+        "webpack-dev-server": "^1.14.1"
+    },
+    "dependencies": {
+        "angular-ui-bootstrap": "^1.2.5"
+    }
+}
